@@ -1,54 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Deok-Joong Lee | CV</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deok-Joong Lee | CV</title>
+  <meta name="description" content="Deok-Joong Lee - Ph.D. Candidate in Artificial Intelligence at Korea University. Research interests include Graph Neural Networks, Protein Design, and Generative Models.">
+  <style>
+    :root {
+      --accent: #2563EB;
+      --accent-dark: #1E3A8A;
+      --light-bg: #EFF6FF;
+      --rule: #BFDBFE;
+      --text-dark: #1E293B;
+      --text-mid: #475569;
+      --text-light: #94A3B8;
+      --border: #E2E8F0;
+      --white: #FFFFFF;
+      --maxw: 920px;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      --radius: 16px;
+    }
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  max-width: 700px;
-  margin: 60px auto;
-  padding: 20px;
-  text-align: center;
-  color: #222;
-}
+    * { box-sizing: border-box; }
 
-h1 {
-  margin-bottom: 10px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.btn {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 18px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  text-decoration: none;
-  color: #111;
-}
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text-dark);
+      background:
+        linear-gradient(180deg, #f8fbff 0%, #ffffff 180px),
+        #ffffff;
+      line-height: 1.6;
+    }
 
-.note {
-  margin-top: 20px;
-  font-size: 0.95rem;
-  color: #666;
-}
-</style>
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+
+    .topbar {
+      height: 6px;
+      width: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    .hero {
+      background: var(--white);
+      border: 1px solid rgba(191, 219, 254, 0.7);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 26px 22px 20px;
+      margin-bottom: 24px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+      gap: 20px;
+      align-items: start;
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--accent-dark);
+    }
+
+    .subtitle {
+      margin: 0 0 14px;
+      font-size: 1.05rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .contact {
+      color: var(--text-mid);
+      font-size: 0.96rem;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .affil {
+      text-align: right;
+      color: var(--text-mid);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      padding-top: 4px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 15px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border: 1px solid var(--border);
+      color: var(--text-dark);
+      background: #fff;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.08);
+      border-color: var(--rule);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);
+    }
+
+    .notice {
+      margin-top: 12px;
+      color: var(--text-light);
+      font-size: 0.88rem;
+    }
+
+    .section {
+      margin-top: 22px;
+      background: var(--white);
+      border: 1px solid rgba(226, 232, 240, 0.9);
+      border-radius: 18px;
+      box-shadow: 0 6px 22px rgba(15, 23, 42, 0.03);
+      padding: 20px 18px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 16px;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--accent-dark);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 6px;
+      height: 22px;
+      border-radius: 999px;
+      background: var(--accent);
+      flex: 0 0 auto;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: var(--light-bg);
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 700;
+      border: 1px solid rgba(191, 219, 254, 0.9);
+    }
+
+    .entry {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 170px;
+      gap: 14px;
+      padding: 12px 0;
+      border-top: 1px solid #eef2f7;
+    }
+
+    .entry:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .entry:last-child {
+      padding-bottom: 0;
+    }
+
+    .entry-title {
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .entry-sub {
+      color: var(--text-dark);
+      margin-top: 2px;
+    }
+
+    .entry-subtle {
+      color: var(--text-mid);
+      font-size: 0.95rem;
+      margin-top: 2px;
+    }
+
+    .entry-date {
+      text-align: right;
+      color: var(--text-mid);
+      font-size: 0.93rem;
+      white-space: pre-line;
+    }
+
+    .pub-group {
+      margin-top: 14px;
+    }
+
+    .pub-group:first-of-type {
+      margin-top: 0;
+    }
+
+    .pub-group-title {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text-dark);
+    }
+
+    .pub {
+      margin: 0 0 12px;
+      padding: 14px 14px 14px 16px;
+      border-left: 4px solid var(--accent);
+      border-radius: 14px;
+      background: var(--light-bg);
+      border-top: 1px solid rgba(191, 219, 254, 0.65);
+      border-right: 1px solid rgba(191, 219, 254, 0.65);
+      border-bottom: 1px solid rgba(191, 219, 254, 0.65);
+    }
+
+    .pub:last-child {
+      margin-bottom: 0;
+    }
+
+    .pub-title {
+      font-weight: 800;
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+
+    .pub-authors {
+      color: var(--text-mid);
+      font-size: 0.94rem;
+      margin-bottom: 4px;
+    }
+
+    .pub-authors strong {
+      color: var(--accent);
+    }
+
+    .pub-venue {
+      color: var(--text-mid);
+      font-size: 0.94rem;
+    }
+
+    .badge-note {
+      display: inline-block;
+      margin-left: 8px;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .footer {
+      text-align: center;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      margin-top: 28px;
+      padding-top: 18px;
+    }
+
+    .footer-line {
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-dark));
+      border-radius: 999px;
+      margin-bottom: 12px;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 760px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .affil {
+        text-align: left;
+        padding-top: 0;
+      }
+
+      .entry {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .entry-date {
+        text-align: left;
+      }
+
+      .section {
+        padding: 18px 14px;
+      }
+
+      .hero {
+        padding: 22px 16px 18px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="wrap">
+    <div class="topbar"></div>
 
-<h1>Deok-Joong Lee</h1>
-<p>Curriculum Vitae</p>
+    <header class="hero">
+      <div class="hero-grid">
+        <div>
+          <h1>Deok-Joong Lee</h1>
+          <p class="subtitle">Ph.D. Candidate · Artificial Intelligence</p>
 
-<a class="btn" href="cv.pdf" target="_blank">📄 Open CV</a>
-<a class="btn" href="cv.pdf" download>⬇ Download PDF</a>
+          <div class="contact">
+            ✉ <a href="mailto:deokjoong@korea.ac.kr">deokjoong@korea.ac.kr</a><br>
+            🎓 <a href="https://scholar.google.com/citations?user=I0y6fMcAAAAJ&hl=ko" target="_blank" rel="noopener">Google Scholar</a>
+          </div>
 
-<p class="note">
-If opened inside apps like KakaoTalk, PDF viewing may be limited.<br>
-Opening in Chrome/Safari is recommended.
-</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://scholar.google.com/citations?user=I0y6fMcAAAAJ&hl=ko" target="_blank" rel="noopener">Google Scholar</a>
+            <!-- Optional PDF button:
+            <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Open PDF CV</a>
+            -->
+          </div>
 
+          <div class="notice">
+            This page is the web version of my CV for stable viewing across desktop and mobile browsers.
+          </div>
+        </div>
+
+        <div class="affil">
+          Medical Artificial Intelligence Lab<br>
+          Dept. of Artificial Intelligence<br>
+          Korea University, Seoul, Korea
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Research Interests</h2>
+      <div class="tags">
+        <span class="tag">Graph Neural Networks</span>
+        <span class="tag">Optimization</span>
+        <span class="tag">Protein Design</span>
+        <span class="tag">Generative Models</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+
+      <div class="entry">
+        <div>
+          <div class="entry-title">Korea University · Seoul, Korea</div>
+          <div class="entry-sub">Integrated M.S.-Ph.D., Department of Artificial Intelligence</div>
+          <div class="entry-subtle">Medical Artificial Intelligence Lab · Advisor: Prof. Tae-Eui Kam</div>
+        </div>
+        <div class="entry-date">Sep 2020 –<br>Feb 2027<br>(Expected)</div>
+      </div>
+
+      <div class="entry">
+        <div>
+          <div class="entry-title">Yonsei University (Mirae Campus) · Wonju, Korea</div>
+          <div class="entry-sub">B.S., Department of Information Statistics</div>
+        </div>
+        <div class="entry-date">Mar 2013 –<br>Aug 2020</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Publications</h2>
+
+      <div class="pub-group">
+        <h3 class="pub-group-title">Journal Articles</h3>
+
+        <div class="pub">
+          <div class="pub-title">Spectral Graph Neural Network-based Multi-Atlas Brain Network Fusion for Major Depressive Disorder Diagnosis</div>
+          <div class="pub-authors"><strong>Deok-Joong Lee</strong>, Dong-Hee Shin, Young-Han Son, Ji-Wung Han, Ji-Hye Oh, Da-Hyun Kim, Ji-Hoon Jeong, Tae-Eui Kam</div>
+          <div class="pub-venue"><em>IEEE Journal of Biomedical and Health Informatics</em> · 2024 <span class="badge-note">[1st Author]</span></div>
+        </div>
+
+        <div class="pub">
+          <div class="pub-title">Population-based Evolutionary Search for Joint Hyperparameter and Architecture Optimization in Brain-Computer Interface</div>
+          <div class="pub-authors">Dong-Hee Shin*, <strong>Deok-Joong Lee</strong>*, Ji-Wung Han, Young-Han Son, Tae-Eui Kam (*equal contribution)</div>
+          <div class="pub-venue"><em>Expert Systems with Applications</em> · 2025 <span class="badge-note">[Co-1st Author]</span></div>
+        </div>
+
+        <div class="pub">
+          <div class="pub-title">Graph-based Conditional Generative Adversarial Networks for Major Depressive Disorder Diagnosis with Synthetic Functional Brain Network Generation</div>
+          <div class="pub-authors">Ji-Hye Oh, <strong>Deok-Joong Lee</strong>, Chang-Hoon Ji, Dong-Hee Shin, Ji-Wung Han, Young-Han Son, Tae-Eui Kam</div>
+          <div class="pub-venue"><em>IEEE Journal of Biomedical and Health Informatics</em> · 2023</div>
+        </div>
+
+        <div class="pub">
+          <div class="pub-title">Source-driven Enhanced Semantic Style Transfer for Addressing BCI Illiteracy in Subject-independent EEG-based Motor Imagery Classification</div>
+          <div class="pub-authors">Ji-Wung Han, Dong-Hee Shin, Chang-Hoon Ji, <strong>Deok-Joong Lee</strong>, Jun-Mo Kim, WooHyeok Choi, Ji-Hye Oh, Sanghyeon Cho, Young-Han Son, Tae-Eui Kam</div>
+          <div class="pub-venue"><em>Applied Soft Computing</em> · 2025</div>
+        </div>
+      </div>
+
+      <div class="pub-group">
+        <h3 class="pub-group-title">Conference Papers</h3>
+
+        <div class="pub">
+          <div class="pub-title">Optical Diffraction-based Convolution for Semiconductor Lithography</div>
+          <div class="pub-authors">Young-Han Son, Dong-Hee Shin, <strong>Deok-Joong Lee</strong>, Hyun Jung Lee, Tae-Eui Kam</div>
+          <div class="pub-venue"><em>IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</em> · 2026 <span class="badge-note">[Accepted]</span></div>
+        </div>
+
+        <div class="pub">
+          <div class="pub-title">Offline Model-based Optimization for Real-World Molecular Discovery</div>
+          <div class="pub-authors">Dong-Hee Shin*, Young-Han Son*, Hyun Jung Lee, <strong>Deok-Joong Lee</strong>, Tae-Eui Kam (*equal contribution)</div>
+          <div class="pub-venue"><em>International Conference on Machine Learning (ICML)</em> · 2025</div>
+        </div>
+
+        <div class="pub">
+          <div class="pub-title">Dynamic Many-Objective Molecular Optimization: Unfolding Complexity with Objective Decomposition and Progressive Optimization</div>
+          <div class="pub-authors">Dong-Hee Shin*, Young-Han Son*, <strong>Deok-Joong Lee</strong>, Ji-Wung Han, Tae-Eui Kam (*equal contribution)</div>
+          <div class="pub-venue"><em>International Joint Conference on Artificial Intelligence (IJCAI)</em> · 2024</div>
+        </div>
+
+        <div class="pub">
+          <div class="pub-title">Treatment Stitching with Schrödinger Bridge for Enhancing Offline Reinforcement Learning in Adaptive Treatment Strategies</div>
+          <div class="pub-authors">Dong-Hee Shin, <strong>Deok-Joong Lee</strong>, Young-Han Son, Tae-Eui Kam</div>
+          <div class="pub-venue"><em>AAAI Conference on Artificial Intelligence (AAAI)</em> · 2025 <span class="badge-note">[Oral Presentation]</span></div>
+        </div>
+
+        <div class="pub">
+          <div class="pub-title">Designing Selective Drugs: Multi-Objective Optimization to Mitigate Off-Target Effects</div>
+          <div class="pub-authors">Dong-Hee Shin, Young-Han Son, <strong>Deok-Joong Lee</strong>, Tae-Eui Kam</div>
+          <div class="pub-venue"><em>International Conference on Electronics, Information, and Communication (ICEIC)</em> · 2025</div>
+        </div>
+
+        <div class="pub">
+          <div class="pub-title">Hybrid Local-Global GNN for Protein Binding Interface Prediction via Ensemble Learning</div>
+          <div class="pub-authors"><strong>Deok-Joong Lee</strong>, Dong-Hee Shin, Young-Han Son, Tae-Eui Kam</div>
+          <div class="pub-venue"><em>International Conference on Electronics, Information, and Communication (ICEIC)</em> · 2025 <span class="badge-note">[1st Author]</span></div>
+        </div>
+
+        <div class="pub">
+          <div class="pub-title">Molecular Optimization with Mamba-Based GFlowNet</div>
+          <div class="pub-authors">Young-Han Son, Dong-Hee Shin, <strong>Deok-Joong Lee</strong>, Tae-Eui Kam</div>
+          <div class="pub-venue"><em>International Conference on Electronics, Information, and Communication (ICEIC)</em> · 2025</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Research Projects</h2>
+
+      <div class="entry">
+        <div>
+          <div class="entry-title">Protein Binding Interface Prediction with Data Augmentation</div>
+          <div class="entry-subtle">Developed a hybrid local-global GNN framework for predicting protein binding interfaces. <strong style="color:#2563EB;">[Under Revision]</strong></div>
+        </div>
+        <div class="entry-date">2025 – Present</div>
+      </div>
+
+      <div class="entry">
+        <div>
+          <div class="entry-title">Protein Sequence Design</div>
+          <div class="entry-subtle">Ongoing research on generative models for protein sequence design, focusing on fitness optimization. <strong style="color:#2563EB;">[In Progress]</strong></div>
+        </div>
+        <div class="entry-date">2026 – Present</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Teaching Experience</h2>
+
+      <div class="entry">
+        <div>
+          <div class="entry-title">Introduction to Graph Neural Networks and Statistics</div>
+          <div class="entry-subtle">Instructor · Tech University of Korea</div>
+        </div>
+        <div class="entry-date">Feb 2023</div>
+      </div>
+
+      <div class="entry">
+        <div>
+          <div class="entry-title">Introduction to Artificial Intelligence</div>
+          <div class="entry-subtle">Tutor · LG CNS</div>
+        </div>
+        <div class="entry-date">2022, 2023</div>
+      </div>
+
+      <div class="entry">
+        <div>
+          <div class="entry-title">Advanced Big Data Analysis</div>
+          <div class="entry-subtle">Teaching Assistant · Korea University</div>
+        </div>
+        <div class="entry-date">Fall 2023, Fall 2024</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Awards &amp; Honors</h2>
+
+      <div class="entry">
+        <div>
+          <div class="entry-title">Big Data-Driven Local Business Consulting Competition</div>
+          <div class="entry-subtle">KT Corporation · Domestic Award</div>
+        </div>
+        <div class="entry-date">2022</div>
+      </div>
+
+      <div class="entry">
+        <div>
+          <div class="entry-title">AGI Idea Hackathon — Idea Award</div>
+          <div class="entry-subtle">Domestic Competition</div>
+        </div>
+        <div class="entry-date">2025</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">Linux</span>
+        <span class="tag">R</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Academic Service</h2>
+
+      <div class="entry">
+        <div>
+          <div class="entry-title">Reviewer · ICLR 2025 – 2026</div>
+          <div class="entry-subtle">International Conference on Learning Representations</div>
+        </div>
+        <div class="entry-date">2025 – 2026</div>
+      </div>
+
+      <div class="entry">
+        <div>
+          <div class="entry-title">Reviewer · NeurIPS 2026</div>
+          <div class="entry-subtle">Conference on Neural Information Processing Systems</div>
+        </div>
+        <div class="entry-date">2026</div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-line"></div>
+      deokjoong@korea.ac.kr · Google Scholar · Medical AI Lab, Korea University
+    </footer>
+  </div>
 </body>
 </html>
