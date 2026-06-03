@@ -81,18 +81,6 @@
       font-weight: 600;
     }
 
-    .contact {
-      color: var(--text-mid);
-      font-size: 0.96rem;
-    }
-
-    .contact a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .contact a:hover { text-decoration: underline; }
-
     .bio {
       margin: 16px 0 0;
       color: var(--text-dark);
@@ -107,8 +95,9 @@
 
     .profile {
       display: flex;
-      justify-content: flex-end;
-      align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
     }
 
     .profile img {
@@ -121,38 +110,22 @@
       background: #fff;
     }
 
-    .actions {
+    .profile-links {
+      width: 220px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 11px 15px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
+      flex-direction: column;
+      gap: 6px;
       font-size: 0.95rem;
-      border: 1px solid var(--border);
-      color: var(--text-dark);
-      background: #fff;
-      transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
+      line-height: 1.45;
     }
 
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.08);
-      border-color: var(--rule);
+    .profile-links a {
+      color: var(--accent);
+      text-decoration: none;
     }
 
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-      border-color: var(--accent);
+    .profile-links a:hover {
+      text-decoration: underline;
     }
 
     .section {
@@ -342,12 +315,16 @@
       }
 
       .profile {
-        justify-content: flex-start;
+        align-items: flex-start;
       }
 
       .profile img {
         width: 180px;
         height: 180px;
+      }
+
+      .profile-links {
+        width: 100%;
       }
 
       .entry {
@@ -384,11 +361,6 @@
           <h1>Deok-Joong Lee</h1>
           <p class="subtitle">Ph.D. Candidate · Artificial Intelligence</p>
 
-          <div class="contact">
-            ✉ <a href="mailto:deokjoong@korea.ac.kr">deokjoong@korea.ac.kr</a><br>
-            🎓 <a href="https://scholar.google.com/citations?user=I0y6fMcAAAAJ&hl=ko" target="_blank" rel="noopener">Google Scholar</a>
-          </div>
-
           <div class="bio">
             <p>
               Hello. I’m Deok-Joong Lee, a Ph.D. candidate in the Department of Artificial Intelligence at Korea University.
@@ -405,14 +377,16 @@
               interactions, ultimately contributing to protein engineering and therapeutic discovery.
             </p>
           </div>
-
-          <div class="actions">
-            <a class="btn btn-primary" href="https://scholar.google.com/citations?user=I0y6fMcAAAAJ&hl=ko" target="_blank" rel="noopener">Google Scholar</a>
-          </div>
         </div>
 
         <div class="profile">
           <img src="profile.JPG" alt="Deok-Joong Lee">
+
+          <div class="profile-links">
+            <a href="mailto:deokjoong@korea.ac.kr">✉ deokjoong@korea.ac.kr</a>
+            <a href="https://scholar.google.com/citations?user=I0y6fMcAAAAJ&hl=ko" target="_blank" rel="noopener">🎓 Google Scholar</a>
+            <a href="YOUR_LINKEDIN_URL_HERE" target="_blank" rel="noopener">💼 LinkedIn</a>
+          </div>
         </div>
       </div>
     </header>
