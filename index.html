@@ -4,8 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Deok-Joong Lee | CV</title>
-  <meta name="description" content="Deok-Joong Lee - Ph.D. Candidate in Artificial Intelligence at Korea University. Research interests include geometric deep learning, generative modeling, protein interactions, docking, and protein design.">
-
+  <meta name="description" content="Deok-Joong Lee - Ph.D. Candidate in Artificial Intelligence at Korea University. Research interests include Graph Neural Networks, Protein Design, and Generative Models.">
   <style>
     :root {
       --accent: #2563EB;
@@ -17,14 +16,16 @@
       --text-light: #94A3B8;
       --border: #E2E8F0;
       --white: #FFFFFF;
-      --maxw: 1040px;
+      --maxw: 920px;
       --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
       --radius: 16px;
     }
 
     * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -39,7 +40,7 @@
     .wrap {
       max-width: var(--maxw);
       margin: 0 auto;
-      padding: 24px 12px 56px;
+      padding: 28px 18px 60px;
     }
 
     .topbar {
@@ -91,7 +92,9 @@
       text-decoration: none;
     }
 
-    .contact a:hover { text-decoration: underline; }
+    .contact a:hover {
+      text-decoration: underline;
+    }
 
     .affil {
       text-align: right;
@@ -135,6 +138,16 @@
       border-color: var(--accent);
     }
 
+    .btn-primary:hover {
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.18);
+    }
+
+    .notice {
+      margin-top: 12px;
+      color: var(--text-light);
+      font-size: 0.88rem;
+    }
+
     .section {
       margin-top: 22px;
       background: var(--white);
@@ -163,36 +176,6 @@
       border-radius: 999px;
       background: var(--accent);
       flex: 0 0 auto;
-    }
-
-    .interest-intro {
-      margin: 0 0 16px;
-      color: var(--text-dark);
-      font-size: 0.98rem;
-    }
-
-    .interest-list {
-      display: grid;
-      gap: 12px;
-    }
-
-    .interest-item {
-      padding: 14px 16px;
-      border-radius: 14px;
-      background: var(--light-bg);
-      border: 1px solid rgba(191, 219, 254, 0.8);
-      border-left: 4px solid var(--accent);
-    }
-
-    .interest-name {
-      font-weight: 800;
-      color: var(--accent-dark);
-      margin-bottom: 4px;
-    }
-
-    .interest-desc {
-      color: var(--text-mid);
-      font-size: 0.95rem;
     }
 
     .tags {
@@ -226,7 +209,9 @@
       padding-top: 0;
     }
 
-    .entry:last-child { padding-bottom: 0; }
+    .entry:last-child {
+      padding-bottom: 0;
+    }
 
     .entry-title {
       font-weight: 700;
@@ -251,8 +236,13 @@
       white-space: pre-line;
     }
 
-    .pub-group { margin-top: 14px; }
-    .pub-group:first-of-type { margin-top: 0; }
+    .pub-group {
+      margin-top: 14px;
+    }
+
+    .pub-group:first-of-type {
+      margin-top: 0;
+    }
 
     .pub-group-title {
       margin: 0 0 10px;
@@ -272,7 +262,9 @@
       border-bottom: 1px solid rgba(191, 219, 254, 0.65);
     }
 
-    .pub:last-child { margin-bottom: 0; }
+    .pub:last-child {
+      margin-bottom: 0;
+    }
 
     .pub-title {
       font-weight: 800;
@@ -286,7 +278,9 @@
       margin-bottom: 4px;
     }
 
-    .pub-authors strong { color: var(--accent); }
+    .pub-authors strong {
+      color: var(--accent);
+    }
 
     .pub-venue {
       color: var(--text-mid);
@@ -317,7 +311,9 @@
     }
 
     @media (max-width: 760px) {
-      .hero-grid { grid-template-columns: 1fr; }
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
 
       .affil {
         text-align: left;
@@ -329,17 +325,20 @@
         gap: 4px;
       }
 
-      .entry-date { text-align: left; }
+      .entry-date {
+        text-align: left;
+      }
 
-      .section { padding: 18px 14px; }
+      .section {
+        padding: 18px 14px;
+      }
 
-      .hero { padding: 22px 16px 18px; }
-
-      .wrap { padding: 18px 10px 48px; }
+      .hero {
+        padding: 22px 16px 18px;
+      }
     }
   </style>
 </head>
-
 <body>
   <div class="wrap">
     <div class="topbar"></div>
@@ -357,6 +356,13 @@
 
           <div class="actions">
             <a class="btn btn-primary" href="https://scholar.google.com/citations?user=I0y6fMcAAAAJ&hl=ko" target="_blank" rel="noopener">Google Scholar</a>
+            <!-- Optional PDF button:
+            <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Open PDF CV</a>
+            -->
+          </div>
+
+          <div class="notice">
+            This page is the web version of my CV for stable viewing across desktop and mobile browsers.
           </div>
         </div>
 
@@ -370,33 +376,11 @@
 
     <section class="section">
       <h2 class="section-title">Research Interests</h2>
-
-      <p class="interest-intro">
-        My research focuses on graph neural networks, optimization, and generative modeling across biomedical and molecular domains.
-        My current research interests lie in geometric and generative approaches for protein interactions, docking, and protein design.
-      </p>
-
-      <div class="interest-list">
-        <div class="interest-item">
-          <div class="interest-name">Geometric Deep Learning for Protein Interactions</div>
-          <div class="interest-desc">
-            Geometric graph neural networks for protein–protein interaction modeling and binding interface prediction
-          </div>
-        </div>
-
-        <div class="interest-item">
-          <div class="interest-name">Generative Modeling for Protein Structure and Design</div>
-          <div class="interest-desc">
-            Generative approaches for protein structure modeling, protein docking, and protein design
-          </div>
-        </div>
-
-        <div class="interest-item">
-          <div class="interest-name">Optimization and Learning for Biomedical AI</div>
-          <div class="interest-desc">
-            Machine learning and optimization methods for drug discovery and biomedical applications
-          </div>
-        </div>
+      <div class="tags">
+        <span class="tag">Graph Neural Networks</span>
+        <span class="tag">Optimization</span>
+        <span class="tag">Protein Design</span>
+        <span class="tag">Generative Models</span>
       </div>
     </section>
 
@@ -406,7 +390,7 @@
       <div class="entry">
         <div>
           <div class="entry-title">Korea University · Seoul, Korea</div>
-          <div class="entry-sub">Integrated M.S.-Ph.D., Department of Artificial Intelligence (GPA: 4.33/4.5)</div>
+          <div class="entry-sub">Integrated M.S.-Ph.D., Department of Artificial Intelligence</div>
           <div class="entry-subtle">Medical Artificial Intelligence Lab · Advisor: Prof. Tae-Eui Kam</div>
         </div>
         <div class="entry-date">Sep 2020 –<br>Feb 2027<br>(Expected)</div>
@@ -415,7 +399,7 @@
       <div class="entry">
         <div>
           <div class="entry-title">Yonsei University (Mirae Campus) · Wonju, Korea</div>
-          <div class="entry-sub">B.S., Department of Information Statistics (GPA: 4.05/4.5)</div>
+          <div class="entry-sub">B.S., Department of Information Statistics</div>
         </div>
         <div class="entry-date">Mar 2013 –<br>Aug 2020</div>
       </div>
@@ -425,7 +409,7 @@
       <h2 class="section-title">Publications</h2>
 
       <div class="pub-group">
-        <h3 class="pub-group-title">Journal Papers</h3>
+        <h3 class="pub-group-title">Journal Articles</h3>
 
         <div class="pub">
           <div class="pub-title">Spectral Graph Neural Network-based Multi-Atlas Brain Network Fusion for Major Depressive Disorder Diagnosis</div>
@@ -445,6 +429,13 @@
           <div class="pub-venue"><em>IEEE Journal of Biomedical and Health Informatics</em> · 2023</div>
         </div>
 
+        <div class="pub">
+          <div class="pub-title">Source-driven Enhanced Semantic Style Transfer for Addressing BCI Illiteracy in Subject-independent EEG-based Motor Imagery Classification</div>
+          <div class="pub-authors">Ji-Wung Han, Dong-Hee Shin, Chang-Hoon Ji, <strong>Deok-Joong Lee</strong>, Jun-Mo Kim, WooHyeok Choi, Ji-Hye Oh, Sanghyeon Cho, Young-Han Son, Tae-Eui Kam</div>
+          <div class="pub-venue"><em>Applied Soft Computing</em> · 2025</div>
+        </div>
+      </div>
+
       <div class="pub-group">
         <h3 class="pub-group-title">Conference Papers</h3>
 
@@ -461,17 +452,17 @@
         </div>
 
         <div class="pub">
+          <div class="pub-title">Dynamic Many-Objective Molecular Optimization: Unfolding Complexity with Objective Decomposition and Progressive Optimization</div>
+          <div class="pub-authors">Dong-Hee Shin*, Young-Han Son*, <strong>Deok-Joong Lee</strong>, Ji-Wung Han, Tae-Eui Kam (*equal contribution)</div>
+          <div class="pub-venue"><em>International Joint Conference on Artificial Intelligence (IJCAI)</em> · 2024</div>
+        </div>
+
+        <div class="pub">
           <div class="pub-title">Treatment Stitching with Schrödinger Bridge for Enhancing Offline Reinforcement Learning in Adaptive Treatment Strategies</div>
           <div class="pub-authors">Dong-Hee Shin, <strong>Deok-Joong Lee</strong>, Young-Han Son, Tae-Eui Kam</div>
           <div class="pub-venue"><em>AAAI Conference on Artificial Intelligence (AAAI)</em> · 2025 <span class="badge-note">[Oral Presentation]</span></div>
         </div>
 
-        <div class="pub">
-          <div class="pub-title">Hybrid Local-Global GNN for Protein Binding Interface Prediction via Ensemble Learning</div>
-          <div class="pub-authors"><strong>Deok-Joong Lee</strong>, Dong-Hee Shin, Young-Han Son, Tae-Eui Kam</div>
-          <div class="pub-venue"><em>International Conference on Electronics, Information, and Communication (ICEIC)</em> · 2025 <span class="badge-note">[1st Author]</span></div>
-        </div>
-        
         <div class="pub">
           <div class="pub-title">Designing Selective Drugs: Multi-Objective Optimization to Mitigate Off-Target Effects</div>
           <div class="pub-authors">Dong-Hee Shin, Young-Han Son, <strong>Deok-Joong Lee</strong>, Tae-Eui Kam</div>
@@ -479,17 +470,16 @@
         </div>
 
         <div class="pub">
+          <div class="pub-title">Hybrid Local-Global GNN for Protein Binding Interface Prediction via Ensemble Learning</div>
+          <div class="pub-authors"><strong>Deok-Joong Lee</strong>, Dong-Hee Shin, Young-Han Son, Tae-Eui Kam</div>
+          <div class="pub-venue"><em>International Conference on Electronics, Information, and Communication (ICEIC)</em> · 2025 <span class="badge-note">[1st Author]</span></div>
+        </div>
+
+        <div class="pub">
           <div class="pub-title">Molecular Optimization with Mamba-Based GFlowNet</div>
           <div class="pub-authors">Young-Han Son, Dong-Hee Shin, <strong>Deok-Joong Lee</strong>, Tae-Eui Kam</div>
           <div class="pub-venue"><em>International Conference on Electronics, Information, and Communication (ICEIC)</em> · 2025</div>
         </div>
-        
-        <div class="pub">
-          <div class="pub-title">Dynamic Many-Objective Molecular Optimization: Unfolding Complexity with Objective Decomposition and Progressive Optimization</div>
-          <div class="pub-authors">Dong-Hee Shin*, Young-Han Son*, <strong>Deok-Joong Lee</strong>, Ji-Wung Han, Tae-Eui Kam (*equal contribution)</div>
-          <div class="pub-venue"><em>International Joint Conference on Artificial Intelligence (IJCAI)</em> · 2024</div>
-        </div>
-        
       </div>
     </section>
 
@@ -567,7 +557,6 @@
         <span class="tag">Python</span>
         <span class="tag">PyTorch</span>
         <span class="tag">Linux</span>
-        <span class="tag">Docker</span>
         <span class="tag">R</span>
       </div>
     </section>
