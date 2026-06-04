@@ -313,41 +313,69 @@
       .hero-grid {
         grid-template-columns: 1fr;
       }
-
       .profile {
         align-items: flex-start;
       }
-
       .profile img {
         width: 180px;
         height: 180px;
       }
-
       .profile-links {
         width: 100%;
       }
-
       .entry {
         grid-template-columns: 1fr;
         gap: 4px;
       }
-
       .entry-date {
         text-align: left;
       }
-
       .section {
         padding: 18px 14px;
       }
-
       .hero {
         padding: 22px 16px 18px;
       }
-
       .wrap {
         padding: 18px 10px 48px;
       }
     }
+    @media print {
+            body {
+              background: #ffffff !important;
+            }
+          
+            .wrap {
+              max-width: 1040px !important;
+              padding: 18px 10px 40px !important;
+            }
+          
+            .hero-grid {
+              display: grid !important;
+              grid-template-columns: minmax(0, 1fr) 220px !important;
+              gap: 20px !important;
+            }
+          
+            .profile {
+              align-items: flex-end !important;
+            }
+          
+            .profile img {
+              width: 180px !important;
+              height: 180px !important;
+            }
+          
+            .profile-links {
+              width: 180px !important;
+            }
+          
+            .section,
+            .hero,
+            .pub {
+              break-inside: avoid;
+              page-break-inside: avoid;
+            }
+          
   </style>
 </head>
 
